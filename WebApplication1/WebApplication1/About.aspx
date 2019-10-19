@@ -4,4 +4,11 @@
     <h2><%: Title %>.</h2>
     <h3>Your application description page.</h3>
     <p>Use this area to provide additional information.</p>
+       <body>
+<!-- partial:index.partial.html -->
+Your Webpage
+<!-- partial -->
+  <script src='https://wchat.freshchat.com/js/widget.js'></script><script  src="./script.js"></script>
+
+</body>
 </asp:Content>

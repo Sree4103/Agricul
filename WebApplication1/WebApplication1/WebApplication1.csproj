@@ -41,6 +41,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -67,9 +70,6 @@
     </Reference>
     <Reference Include="AspNet.ScriptManager.bootstrap">
       <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.jQuery">
-      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ScriptManager.MSAjax">
       <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
@@ -145,10 +145,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="boostrap\css\bootstrap-grid.css" />
+    <Content Include="boostrap\css\bootstrap-grid.min.css" />
+    <Content Include="boostrap\css\bootstrap-reboot.css" />
+    <Content Include="boostrap\css\bootstrap-reboot.min.css" />
+    <Content Include="boostrap\css\bootstrap.css" />
+    <Content Include="boostrap\css\bootstrap.min.css" />
+    <Content Include="boostrap\js\bootstrap.bundle.js" />
+    <Content Include="boostrap\js\bootstrap.bundle.min.js" />
+    <Content Include="boostrap\js\bootstrap.js" />
+    <Content Include="boostrap\js\bootstrap.min.js" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\default.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -156,11 +167,28 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="boostrap\css\bootstrap-grid.css.map" />
+    <Content Include="boostrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="boostrap\css\bootstrap-reboot.css.map" />
+    <Content Include="boostrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="boostrap\css\bootstrap.css.map" />
+    <Content Include="boostrap\css\bootstrap.min.css.map" />
+    <Content Include="boostrap\js\bootstrap.bundle.js.map" />
+    <Content Include="boostrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="boostrap\js\bootstrap.js.map" />
+    <Content Include="boostrap\js\bootstrap.min.js.map" />
+    <Content Include="images\Login_Page_1.jfif" />
+    <Content Include="images\Login_Page_2.jfif" />
+    <Content Include="images\Login_Page_3.jfif" />
+    <Content Include="images\logo.PNG" />
+    <Content Include="images\user-login.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -246,7 +274,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

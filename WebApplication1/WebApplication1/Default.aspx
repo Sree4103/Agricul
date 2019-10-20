@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Smart Agriculture" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1._Default" %>
+<%@ Page Title="Smart Agriculture" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div>
@@ -75,7 +75,10 @@
                                             <asp:CheckBox runat="server" class="custom-control-input" ID="customCheck1" />
                                             <asp:Label runat="server" class="custom-control-label" for="customCheck1">Remember password</asp:Label>
                                         </div>
+
                                         <asp:Button ID="Button1" class="btn btn-lg btn-primary btn-block text-uppercase" runat="server" OnClick="Button1_Click" Text="Sign In" Height="37px" />
+
+
                                     </div>
                                 </div>
                             </div>
@@ -85,5 +88,21 @@
             </asp:TableRow>
         </asp:Table>
     </div>
+
+       <script src='https://wchat.freshchat.com/js/widget.js'></script>
+   <script>
+       function initFreshChat() {
+    window.fcWidget.init({
+        token: "e5868f05-3ac4-407d-82fb-9254083e02fc",
+        host: "https://wchat.freshchat.com",
+        externalId: "joey@gmail.com",     // user’s id unique to your system
+        firstName: "Joe",              // user’s first name
+        lastName: "Deny" 
+    });
+}
+function initialize(i, t) {
+    var e; i.getElementById(t) ? initFreshChat() : ((e = i.createElement("script")).id = t, e.async = !0, e.src = "https://wchat.freshchat.com/js/widget.js", e.onload = initFreshChat, i.head.appendChild(e))
+} function initiateCall() { initialize(document, "freshchat-js-sdk") } window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
+   </script>
 
 </asp:Content>

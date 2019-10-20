@@ -1,0 +1,9 @@
+﻿.card-image{
+    border:1px;
+}
+tr{
+    display:block;
+    text-align:justify;
+    font:50px;
+    font-family:Verdana;
+}

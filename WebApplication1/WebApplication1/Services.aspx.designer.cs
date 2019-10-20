@@ -11,7 +11,7 @@ namespace WebApplication1
 {
 
 
-    public partial class About1
+    public partial class Services
     {
     }
 }

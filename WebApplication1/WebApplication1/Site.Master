@@ -5,16 +5,16 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Agriculture</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="./boostrap/css/bootstrap.min.css" rel="stylesheet" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link href="~/css/login-landing.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -23,8 +23,8 @@
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="jquery" Path="~/Scripts/jquery-3.4.1.min.js" />
+                <asp:ScriptReference Name="bootstrap" Path="~/Scripts/bootstrap.js" />
                 <asp:ScriptReference Name="respond" />
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
@@ -38,35 +38,44 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top  position-sticky align-content-center">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                <a href="Default.aspx" class="navbar-brand">
+                    <img src="./images/logo.PNG" width="250" alt="" class="d-inline-block" />
+                    <%--<span class="text-uppercase font-weight-bold">Smart Agri</span>--%>
+                    <img src="./images/smart-agri.PNG" width="250" alt="" class="d-inline-block" />
+                </a>
+
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+
+                <div id="navbarSupportedContent" class="collapse navbar-collapse pull-right " style="display: flex; flex-direction: column; justify-content: flex-end;" >
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="About.aspx" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="Services.aspx" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="Contact.aspx" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
         </div>
-
+         <script src='https://wchat.freshchat.com/js/widget.js'></script>
+   <script>
+       function initFreshChat() {
+    window.fcWidget.init({
+        token: "e5868f05-3ac4-407d-82fb-9254083e02fc",
+        host: "https://wchat.freshchat.com",
+        externalId: "joey@gmail.com",     // user’s id unique to your system
+        firstName: "Joe",              // user’s first name
+        lastName: "Deny" 
+    });
+}
+function initialize(i, t) {
+    var e; i.getElementById(t) ? initFreshChat() : ((e = i.createElement("script")).id = t, e.async = !0, e.src = "https://wchat.freshchat.com/js/widget.js", e.onload = initFreshChat, i.head.appendChild(e))
+} function initiateCall() { initialize(document, "freshchat-js-sdk") } window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
+   </script>
     </form>
 </body>
 </html>

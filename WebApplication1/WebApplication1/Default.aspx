@@ -17,7 +17,7 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="./images/Login_Page_1.jfif" alt="Los Angeles" width="1024">
+                        <img src="./images/1.jpg" alt="Los Angeles" width="1024">
                         <div class="carousel-caption d-none">
                             <h5>...</h5>
                             <p>...</p>
@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="./images/Login_Page_2.jfif" alt="Chicago" width="1024">
+                        <img src="./images/2.jpg" alt="Chicago" width="1024">
                         <div class="carousel-caption d-none">
                             <h5>...</h5>
                             <p>...</p>
@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="./images/Login_Page_3.jfif" alt="New york" width="1024">
+                        <img src="./images/3.jpg" alt="New york" width="1024">
                         <div class="carousel-caption d-none">
                             <h5>...</h5>
                             <p>...</p>
